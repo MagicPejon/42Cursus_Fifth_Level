@@ -1,0 +1,15 @@
+#vscode
+.vscode
+
+#dynamic libraries
+*.dSYM
+
+#Libraries
+*.a
+
+#object files folder/.o files
+object_files
+*.o
+
+#executables
+cub3D
