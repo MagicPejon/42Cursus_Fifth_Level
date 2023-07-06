@@ -1,0 +1,37 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: amalbrei <amalbrei@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/07/04 18:19:24 by amalbrei          #+#    #+#              #
+#    Updated: 2023/07/06 19:49:28 by amalbrei         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = phonebook
+GPP = g++
+CPPFLAGS = -Werror -Wall -Wextra -std=c++98
+RM = rm -rf
+SRC = PhoneBook.cpp Contacts.cpp main.cpp
+OBJ = $(SRC:%.cpp=%.o)
+
+%.o: %.cpp
+	$(GPP) $(CPPFLAGS) -c $< -o $@
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(GPP) $(CPPFLAGS) $(OBJ) -o $@
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+	
+
+re: fclean all
+
+.PHONY: all clean fclean re
