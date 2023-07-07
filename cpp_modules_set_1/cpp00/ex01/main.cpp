@@ -6,7 +6,7 @@
 /*   By: amalbrei <amalbrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:36:28 by amalbrei          #+#    #+#             */
-/*   Updated: 2023/07/06 20:23:13 by amalbrei         ###   ########.fr       */
+/*   Updated: 2023/07/07 15:47:16 by amalbrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(void)
 {
 	int			i;
-	Phonebook	phonebook(0, "ADD", "SEARCH", "EXIT");
+	PhoneBook	phonebook(0, "ADD", "SEARCH", "EXIT");
 	Contact		contact;
 
 	i = 0;

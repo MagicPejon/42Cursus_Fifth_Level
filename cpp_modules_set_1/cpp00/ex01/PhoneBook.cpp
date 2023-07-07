@@ -6,13 +6,13 @@
 /*   By: amalbrei <amalbrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:19:11 by amalbrei          #+#    #+#             */
-/*   Updated: 2023/07/06 20:16:03 by amalbrei         ###   ########.fr       */
+/*   Updated: 2023/07/07 15:48:10 by amalbrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-Phonebook::Phonebook(int choice, std::string add, std::string search, std::string exit)
+PhoneBook::PhoneBook(int choice, std::string add, std::string search, std::string exit)
 {
 	this->choice = choice;
 	this->_add = add;
@@ -23,12 +23,12 @@ Phonebook::Phonebook(int choice, std::string add, std::string search, std::strin
 	return;
 }
 
-Phonebook::~Phonebook()
+PhoneBook::~PhoneBook()
 {
 	return;
 }
 
-int Phonebook::compare(std::string target)
+int PhoneBook::compare(std::string target)
 {
 	int	i;
 
@@ -72,17 +72,17 @@ int Phonebook::compare(std::string target)
 	return (0);
 }
 
-int	Phonebook::get_maxindex()
+int	PhoneBook::get_maxindex()
 {
 	return (this->_maxindex);
 }
 
-Contact Phonebook::get_contact(int index)
+Contact PhoneBook::get_contact(int index)
 {
 	return(this->_contacts[index]);
 }
 
-void	Phonebook::add_contact(Contact contact)
+void	PhoneBook::add_contact(Contact contact)
 {
 	this->_contacts[this->_index] = contact;
 	std::cout << "Contact added to book" << std::endl;
@@ -94,7 +94,7 @@ void	Phonebook::add_contact(Contact contact)
 		this->_maxindex = 8;
 }
 
-int	Phonebook::display_list()
+int	PhoneBook::display_list()
 {
 	int	index_l;
 
@@ -136,7 +136,7 @@ int	Phonebook::display_list()
 	return (1);
 }
 
-int	Phonebook::search_list()
+int	PhoneBook::search_list()
 {
 	std::string input;
 

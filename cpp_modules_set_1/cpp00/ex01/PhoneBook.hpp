@@ -6,7 +6,7 @@
 /*   By: amalbrei <amalbrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 18:19:15 by amalbrei          #+#    #+#             */
-/*   Updated: 2023/07/06 19:59:21 by amalbrei         ###   ########.fr       */
+/*   Updated: 2023/07/07 15:46:37 by amalbrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iomanip>
 #include "Contacts.hpp"
 
-class Phonebook
+class PhoneBook
 {
 
 private:
@@ -32,8 +32,8 @@ public:
 	std::string	input;
 	int			choice;
 	
-	Phonebook(int choice, std::string add, std::string search, std::string exit);
-	~Phonebook(void);
+	PhoneBook(int choice, std::string add, std::string search, std::string exit);
+	~PhoneBook(void);
 	int		compare(std::string target);
 	int		get_maxindex(void);
 	Contact	get_contact(int index);
