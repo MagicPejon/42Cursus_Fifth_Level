@@ -6,24 +6,24 @@
 #    By: amalbrei <amalbrei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/04 18:19:24 by amalbrei          #+#    #+#              #
-#    Updated: 2023/07/06 19:49:28 by amalbrei         ###   ########.fr        #
+#    Updated: 2023/07/07 17:17:44 by amalbrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
-GPP = g++
-CPPFLAGS = -Werror -Wall -Wextra -std=c++98
+CXX = c++
+CXXFLAGS = -Werror -Wall -Wextra -std=c++98
 RM = rm -rf
 SRC = PhoneBook.cpp Contacts.cpp main.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 %.o: %.cpp
-	$(GPP) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(GPP) $(CPPFLAGS) $(OBJ) -o $@
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $@
 
 clean:
 	$(RM) $(OBJ)
