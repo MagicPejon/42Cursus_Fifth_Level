@@ -5,18 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amalbrei <amalbrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 14:49:08 by amalbrei          #+#    #+#             */
-/*   Updated: 2023/07/09 15:27:47 by amalbrei         ###   ########.fr       */
+/*   Created: 2023/07/09 15:29:14 by amalbrei          #+#    #+#             */
+/*   Updated: 2023/07/09 15:56:21 by amalbrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#include "Zombie.hpp"
+#include <iostream>
 
 int main()
 {
-	Zombie* zoom = zombieHorde(20, "Zmeeseeks");
-	delete [] (zoom);
+	std::string subject = "HI THIS IS BRAIN";
+	std::string* stringPTR = &subject;
+	std::string& stringREF = subject;
+	
+	std::cout << &subject << std::endl;
+	std::cout << &stringPTR << std::endl;
+	std::cout << &stringREF << std::endl;
+
+	std::cout << subject << std::endl;
+	std::cout << stringPTR << std::endl;
+	std::cout << stringREF << std::endl;
+	
 	return (0);
 }

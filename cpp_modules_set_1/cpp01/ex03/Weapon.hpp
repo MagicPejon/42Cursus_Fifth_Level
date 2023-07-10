@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amalbrei <amalbrei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 14:49:08 by amalbrei          #+#    #+#             */
-/*   Updated: 2023/07/09 15:27:47 by amalbrei         ###   ########.fr       */
+/*   Created: 2023/07/09 15:59:13 by amalbrei          #+#    #+#             */
+/*   Updated: 2023/07/09 16:22:05 by amalbrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WEAPON_H
+# define WEAPON_H
 
-
-#include "Zombie.hpp"
-
-int main()
+class Weapon
 {
-	Zombie* zoom = zombieHorde(20, "Zmeeseeks");
-	delete [] (zoom);
-	return (0);
+	private:
+		std::string _type;
+
+	public:
+		Weapon(std::string type);
+		~Weapon(void);
+		const Weapon getType(void);
+		void setType(std:string input);
 }
+
+#endif
